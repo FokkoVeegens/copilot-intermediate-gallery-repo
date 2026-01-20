@@ -459,13 +459,13 @@ body {
 
 /* Marching Ants Animation */
 .marching-ants-border {
+  --marching-ants-color: #3b82f6;
   position: relative;
   background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4));
   background-clip: padding-box;
-  border: 3px dashed var(--marching-ants-color, #3b82f6);
+  border: 3px dashed var(--marching-ants-color);
   border-radius: 1rem;
   animation: marchingAnts 2s linear infinite;
-  --marching-ants-color: #3b82f6;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -477,25 +477,9 @@ body {
 
 @keyframes marchingAnts {
   0% {
-    border-image-source: repeating-linear-gradient(
-      90deg,
-      var(--marching-ants-color, #3b82f6) 0px,
-      var(--marching-ants-color, #3b82f6) 10px,
-      transparent 10px,
-      transparent 20px
-    );
-    border-image-slice: 1;
-    border-image-repeat: round;
+    background-position: 0 0;
   }
   100% {
-    border-image-source: repeating-linear-gradient(
-      90deg,
-      var(--marching-ants-color, #3b82f6) 10px,
-      var(--marching-ants-color, #3b82f6) 20px,
-      transparent 20px,
-      transparent 30px
-    );
-    border-image-slice: 1;
-    border-image-repeat: round;
+    background-position: 12px 12px;
   }
 }
