@@ -462,15 +462,16 @@ body {
   position: relative;
   background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4));
   background-clip: padding-box;
-  border: 3px dashed #3b82f6;
+  border: 3px dashed var(--marching-ants-color, #3b82f6);
   border-radius: 1rem;
   animation: marchingAnts 2s linear infinite;
+  --marching-ants-color: #3b82f6;
 }
 
 @media (prefers-color-scheme: dark) {
   .marching-ants-border {
     background: linear-gradient(to bottom right, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.4));
-    border-color: #60a5fa;
+    --marching-ants-color: #60a5fa;
   }
 }
 
@@ -478,8 +479,8 @@ body {
   0% {
     border-image-source: repeating-linear-gradient(
       90deg,
-      #3b82f6 0px,
-      #3b82f6 10px,
+      var(--marching-ants-color, #3b82f6) 0px,
+      var(--marching-ants-color, #3b82f6) 10px,
       transparent 10px,
       transparent 20px
     );
@@ -489,8 +490,8 @@ body {
   100% {
     border-image-source: repeating-linear-gradient(
       90deg,
-      #3b82f6 10px,
-      #3b82f6 20px,
+      var(--marching-ants-color, #3b82f6) 10px,
+      var(--marching-ants-color, #3b82f6) 20px,
       transparent 20px,
       transparent 30px
     );
