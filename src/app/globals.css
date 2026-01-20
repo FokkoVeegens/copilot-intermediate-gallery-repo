@@ -461,24 +461,30 @@ body {
 .marching-ants-border {
   position: relative;
   background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4));
-  border: 3px dashed #3b82f6;
   background-clip: padding-box;
-  animation: marchingAnts 1s linear infinite;
+  border: 3px dashed #3b82f6;
+  border-radius: 1rem;
+  animation: marchingAnts 20s linear infinite;
+  background-size: 20px 20px;
+  background-image: 
+    linear-gradient(to right, transparent 50%, transparent 50%),
+    linear-gradient(to bottom, transparent 50%, transparent 50%),
+    linear-gradient(to right, transparent 50%, transparent 50%),
+    linear-gradient(to bottom, transparent 50%, transparent 50%);
 }
 
 @media (prefers-color-scheme: dark) {
   .marching-ants-border {
     background: linear-gradient(to bottom right, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.4));
+    border-color: #60a5fa;
   }
 }
 
 @keyframes marchingAnts {
   0% {
-    background-position: 0 0;
-    border-image: linear-gradient(90deg, #3b82f6 50%, transparent 50%) 1;
-    border-image-slice: 1;
+    background-position: 0 0, 0 0, 0 100%, 100% 0;
   }
   100% {
-    background-position: 24px 24px;
+    background-position: 20px 0, 0 20px, 0 100%, 100% 0;
   }
 }
