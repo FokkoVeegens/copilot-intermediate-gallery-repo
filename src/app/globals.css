@@ -464,13 +464,7 @@ body {
   background-clip: padding-box;
   border: 3px dashed #3b82f6;
   border-radius: 1rem;
-  animation: marchingAnts 20s linear infinite;
-  background-size: 20px 20px;
-  background-image: 
-    linear-gradient(to right, transparent 50%, transparent 50%),
-    linear-gradient(to bottom, transparent 50%, transparent 50%),
-    linear-gradient(to right, transparent 50%, transparent 50%),
-    linear-gradient(to bottom, transparent 50%, transparent 50%);
+  animation: marchingAnts 2s linear infinite;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -482,9 +476,25 @@ body {
 
 @keyframes marchingAnts {
   0% {
-    background-position: 0 0, 0 0, 0 100%, 100% 0;
+    border-image-source: repeating-linear-gradient(
+      90deg,
+      #3b82f6 0px,
+      #3b82f6 10px,
+      transparent 10px,
+      transparent 20px
+    );
+    border-image-slice: 1;
+    border-image-repeat: round;
   }
   100% {
-    background-position: 20px 0, 0 20px, 0 100%, 100% 0;
+    border-image-source: repeating-linear-gradient(
+      90deg,
+      #3b82f6 10px,
+      #3b82f6 20px,
+      transparent 20px,
+      transparent 30px
+    );
+    border-image-slice: 1;
+    border-image-repeat: round;
   }
 }
