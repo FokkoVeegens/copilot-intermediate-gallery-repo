@@ -477,9 +477,12 @@ body {
 
 @keyframes marchingAnts {
   0% {
-    background-position: 0 0;
+    outline-offset: 0px;
+  }
+  50% {
+    outline-offset: 2px;
   }
   100% {
-    background-position: 12px 12px;
+    outline-offset: 0px;
   }
 }

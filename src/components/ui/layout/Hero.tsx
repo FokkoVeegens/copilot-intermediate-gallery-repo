@@ -12,7 +12,7 @@ export function Hero({ title, description }: HeroProps) {
     <section className="py-20 px-4">
       <div className="container mx-auto text-center">
         <motion.div
-          className="inline-block marching-ants-border p-8 rounded-2xl mb-6"
+          className="inline-block marching-ants-border p-8 mb-6"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
