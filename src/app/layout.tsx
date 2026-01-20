@@ -30,9 +30,9 @@ export default function RootLayout({
             <div className="flex items-center justify-between">
               <Link href="/" className="flex items-center gap-2">
                 <Camera className="h-8 w-8 text-blue-600" />
-                <h1 className="text-2xl font-bold text-slate-900 dark:text-white">
+                <span className="text-2xl font-bold text-slate-900 dark:text-white">
                   Portfolio Gallery
-                </h1>
+                </span>
               </Link>
               <nav className="flex items-center gap-6">
                 <Link href="/gallery" className="nav-link">
