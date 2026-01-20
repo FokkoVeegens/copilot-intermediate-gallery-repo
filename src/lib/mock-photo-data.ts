@@ -109,5 +109,38 @@ export const mockPhotos: Photo[] = [
     views: 4321,
     photographer: 'Tom Anderson',
     dateTaken: '2023-12-20'
+  },
+  {
+    id: '10',
+    url: '/placeholder-10.jpg',
+    title: 'Ocean Sunset',
+    tags: ['seascape', 'sunset', 'ocean', 'beach'],
+    likes: 276,
+    downloads: 128,
+    views: 3187,
+    photographer: 'Rachel Green',
+    dateTaken: '2025-11-15'
+  },
+  {
+    id: '11',
+    url: '/placeholder-11.jpg',
+    title: 'Artisan Coffee',
+    tags: ['food', 'beverage', 'coffee', 'lifestyle'],
+    likes: 142,
+    downloads: 58,
+    views: 1564,
+    photographer: 'Marcus Lee',
+    dateTaken: '2025-10-08'
+  },
+  {
+    id: '12',
+    url: '/placeholder-12.jpg',
+    title: 'Abstract Geometry',
+    tags: ['abstract', 'art', 'geometric', 'modern', 'minimalist'],
+    likes: 198,
+    downloads: 84,
+    views: 2276,
+    photographer: 'Sofia Torres',
+    dateTaken: '2025-09-22'
   }
 ];
